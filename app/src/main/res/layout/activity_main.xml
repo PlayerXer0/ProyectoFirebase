@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="685dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="44dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Formulario de Ingreso de Mascotas"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <!-- Campo: Código de Chip -->
+        <EditText
+            android:id="@+id/txtCodigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese el Código de Chip"
+            android:minHeight="48dp" />
+
+        <!-- Campo: Nombre de la Mascota -->
+        <EditText
+            android:id="@+id/txtNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese el Nombre de la Mascota"
+            android:minHeight="48dp" />
+
+        <!-- Selector: Tipo de Mascota -->
+        <Spinner
+            android:id="@+id/spMascota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Mascota"
+            android:minHeight="48dp" />
+
+        <!-- Campo: Nombre del Dueño -->
+        <EditText
+            android:id="@+id/txtDueño"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese el Nombre del Dueño"
+            android:minHeight="48dp" />
+
+        <!-- Campo: Dirección del Dueño -->
+        <EditText
+            android:id="@+id/txtDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese la Dirección del Dueño"
+            android:minHeight="48dp" />
+
+        <!-- Botón: Enviar Datos -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="enviarDatosFirestore"
+            android:text="Enviar Datos"
+            android:textColor="@color/white" />
+
+        <!-- Botón: Cargar Datos -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="CargarLista"
+            android:text="Cargar Datos"
+            android:textColor="@color/white" />
+
+        <!-- ListView: Mostrar Datos -->
+        <ListView
+            android:id="@+id/lista"
+            android:layout_width="match_parent"
+            android:layout_height="199dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
